@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+<body>
+
+<div class="container py-5">
+    <div th:replace="head"></div>
+    <form th:action="@{/}" th:object="${user}" method="post">
+        <div><h3 class="text-info text-center">Please insert list of 20 integers</h3></div>
+
+        <div class="border border-info rounded p-5 m-1">
+
+            <div class="text-center m-2">
+                <label for="name" class="col-sm-2 col-form-label">Title</label>
+                <div class="col-sm-10">
+                    <input th:field="*{name}" name="name" type="text" class="form-control" th:classappend="${nameError}?'is-invalid'"
+                           id="name">
+                    <div th:if="${nameError}" th:utext="${nameError}" class="invalid-feedback"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group row col">
+                    <label for="1" class="col-sm-2 col-form-label">1-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num1}" name="num1" type="number" class="form-control" th:classappend="${num1Error}?'is-invalid'"
+                               id="1">
+                        <div th:if="${num1Error}" th:utext="${num1Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="2" class="col-sm-2 col-form-label">2-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num2}" name="num2" type="number" class="form-control" th:classappend="${num2Error}?'is-invalid'"
+                               id="2">
+                        <div th:if="${num2Error}" th:utext="${num2Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="3" class="col-sm-2 col-form-label">3-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num3}" name="num3" type="number" class="form-control" th:classappend="${num3Error}?'is-invalid'"
+                               id="3">
+                        <div th:if="${num3Error}" th:utext="${num3Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="4" class="col-sm-2 col-form-label">4-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num4}" name="num4" type="number" class="form-control" th:classappend="${num4Error}?'is-invalid'"
+                               id="4">
+                        <div th:if="${num4Error}" th:utext="${num4Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="5" class="col-sm-2 col-form-label">5-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num5}" name="num5" type="number" class="form-control" th:classappend="${num5Error}?'is-invalid'"
+                               id="5">
+                        <div th:if="${num5Error}" th:utext="${num5Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group row col">
+                    <label for="6" class="col-sm-2 col-form-label">6-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num6}" name="num6" type="number" class="form-control" th:classappend="${num6Error}?'is-invalid'"
+                               id="6">
+                        <div th:if="${num6Error}" th:utext="${num6Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="7" class="col-sm-2 col-form-label">7-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num7}" name="num7" type="number" class="form-control" th:classappend="${num7Error}?'is-invalid'"
+                               id="7">
+                        <div th:if="${num7Error}" th:utext="${num7Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="8" class="col-sm-2 col-form-label">8-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num8}" name="num8" type="number" class="form-control" th:classappend="${num8Error}?'is-invalid'"
+                               id="8">
+                        <div th:if="${num8Error}" th:utext="${num8Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="9" class="col-sm-2 col-form-label">9-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num9}" name="num9" type="number" class="form-control" th:classappend="${num9Error}?'is-invalid'"
+                               id="9">
+                        <div th:if="${num9Error}" th:utext="${num9Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="10" class="col-sm-2 col-form-label">10-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num10}" name="num10" type="number" class="form-control"
+                               th:classappend="${num10Error}?'is-invalid'" id="10">
+                        <div th:if="${num10Error}" th:utext="${num10Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="form-group row col">
+                    <label for="11" class="col-sm-2 col-form-label">11-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num11}" name="num11" type="number" class="form-control"
+                               th:classappend="${num11Error}?'is-invalid'" id="11">
+                        <div th:if="${num11Error}" th:utext="${num11Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="12" class="col-sm-2 col-form-label">12-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num12}" name="num12" type="number" class="form-control"
+                               th:classappend="${num12Error}?'is-invalid'" id="12">
+                        <div th:if="${num12Error}" th:utext="${num12Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="13" class="col-sm-2 col-form-label">13-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num13}" name="num13" type="number" class="form-control"
+                               th:classappend="${num13Error}?'is-invalid'" id="13">
+                        <div th:if="${num13Error}" th:utext="${num13Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="14" class="col-sm-2 col-form-label">14-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num14}" name="num14" type="number" class="form-control"
+                               th:classappend="${num14Error}?'is-invalid'" id="14">
+                        <div th:if="${num14Error}" th:utext="${num14Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="15" class="col-sm-2 col-form-label">15-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num15}" name="num15" type="number" class="form-control"
+                               th:classappend="${num15Error}?'is-invalid'" id="15">
+                        <div th:if="${num15Error}" th:utext="${num15Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group row col">
+                    <label for="16" class="col-sm-2 col-form-label">16-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num16}" name="num16" type="number" class="form-control"
+                               th:classappend="${num16Error}?'is-invalid'" id="16">
+                        <div th:if="${num16Error}" th:utext="${num16Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="17" class="col-sm-2 col-form-label">17-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num17}" name="num17" type="number" class="form-control"
+                               th:classappend="${num17Error}?'is-invalid'" id="17">
+                        <div th:if="${num17Error}" th:utext="${num17Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="18" class="col-sm-2 col-form-label">18-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num18}" name="num18" type="number" class="form-control"
+                               th:classappend="${num18Error}?'is-invalid'" id="18">
+                        <div th:if="${num18Error}" th:utext="${num18Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="19" class="col-sm-2 col-form-label">19-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num19}" name="num19" type="number" class="form-control"
+                               th:classappend="${num19Error}?'is-invalid'" id="19">
+                        <div th:if="${num19Error}" th:utext="${num19Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="form-group row col">
+                    <label for="20" class="col-sm-2 col-form-label">20-</label>
+                    <div class="col-sm-10">
+                        <input th:field="*{num20}" name="num20" type="number" class="form-control"
+                               th:classappend="${num20Error}?'is-invalid'" id="20">
+                        <div th:if="${num20Error}" th:utext="${num20Error}" class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+
+    <div th:if="${mess}" class="row border border-info rounded p-5 m-1">
+        <div class="form-group row col">
+            <label for="avg" class="col-sm-2 col-form-label">AVG=</label>
+            <div class="col-sm-10">
+                <h5  class="form-control" id="avg" th:utext="${mess.getAvg()}"></h5>
+            </div>
+        </div>
+        <div class="form-group row col">
+            <label for="sum" class="col-sm-2 col-form-label">SUM=</label>
+            <div class="col-sm-10">
+                <h5  class="form-control" id="sum" th:utext="${mess.getSum()}"></h5>
+            </div>
+        </div>
+        <div class="form-group row col">
+            <label for="title" class="col-sm-2 col-form-label">Name=</label>
+            <div class="col-sm-10">
+                <h5  class="form-control" id="title" th:utext="${mess.getName()}"></h5>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
